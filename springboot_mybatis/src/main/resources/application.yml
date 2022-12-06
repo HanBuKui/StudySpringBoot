@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/webwork?serverTimezone=UTC
     username: root
-    password: 200621
+    password: root
 
 #
 ##下面这些内容是为了让MyBatis映射

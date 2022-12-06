@@ -1,7 +1,10 @@
 package com.zjh.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.zjh.entity.Product;
+
+import java.util.List;
 
 /**
  * @ClassName: IProductService
@@ -13,4 +16,7 @@ import com.zjh.entity.Product;
 
 
 public interface IProductService extends IService<Product> {
+
+    public IPage<Product> getPage(int page, int size);
+
 }

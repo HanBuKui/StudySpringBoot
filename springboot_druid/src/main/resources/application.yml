@@ -3,7 +3,7 @@
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #    url: jdbc:mysql://localhost:3306/webwork?serverTimezone=UTC
 #    username: root
-#    password: 200621
+#    password: root
 #    type: com.alibaba.druid.pool.DruidDataSource
 
 
@@ -13,4 +13,4 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/webwork?serverTimezone=UTC
       username: root
-      password: 200621
+      password: root

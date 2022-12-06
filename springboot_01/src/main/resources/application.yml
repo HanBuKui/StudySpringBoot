@@ -1,0 +1,13 @@
+server:
+  port: 9000
+
+
+#自己定义的配置信息读取格式
+datasource:
+  driver: ${server.port}.com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost/springboot_db
+  username: root
+  password: 123
+  user:
+    name: zjh
+    age: 22

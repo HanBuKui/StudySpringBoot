@@ -1,6 +1,7 @@
 package com.zjh.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.zjh.controller.utils.Result;
 import com.zjh.entity.Product;
 import com.zjh.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,33 +26,53 @@ public class ProductController {
     private IProductService service;
 
     @GetMapping
-    public List<Product> getAll(){
-        return service.list();
+//    public List<Product> getAll(){
+//        return service.list();
+//    }
+    public Result getAll(){
+        return new Result(true,service.list());
     }
 
     @PostMapping
-    public boolean save(@RequestBody Product product){
-        return service.save(product);
+//    public boolean save(@RequestBody Product product){
+//        return service.save(product);
+//    }
+    public Result save(@RequestBody Product product){
+        Result result = new Result(service.save(product));
+        return result;
     }
 
     @PutMapping
-    public boolean update(@RequestBody Product product){
-        return service.updateById(product);
+//    public boolean update(@RequestBody Product product){
+//        return service.updateById(product);
+//    }
+    public Result update(@RequestBody Product product){
+        return new Result(service.updateById(product));
     }
 
     @DeleteMapping("/{id}")
-    public boolean delete(@PathVariable("id") Integer id){
-        return service.removeById(id);
+//    public boolean delete(@PathVariable("id") Integer id){
+//        return service.removeById(id);
+//    }
+    public Result delete(@PathVariable("id") Integer id){
+        return new Result(service.removeById(id));
     }
 
     @GetMapping("/{id}")
-    public Product getById(@PathVariable("id") Integer id){
-        return service.getById(id);
+//    public Product getById(@PathVariable("id") Integer id){
+//        return service.getById(id);
+//    }
+    public Result getById(@PathVariable("id") Integer id){
+        return new Result(true,service.getById(id));
     }
 
     @GetMapping("/{curPage}/{size}")
-    public IPage<Product> getPage(@PathVariable int curPage, @PathVariable int size){
-        return service.getPage(curPage,size);
+//    public IPage<Product> getPage(@PathVariable int curPage, @PathVariable int size){
+//        return service.getPage(curPage,size);
+//    }
+    public Result getPage(@PathVariable int curPage, @PathVariable int size){
+        return new Result(true,service.getPage(curPage,size));
     }
+
 
 }

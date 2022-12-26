@@ -17,6 +17,12 @@ import java.util.List;
 
 public interface IProductService extends IService<Product> {
 
+    /**
+     *
+     * @param page 当前页
+     * @param size 页面显示数据大小
+     * @return
+     */
     public IPage<Product> getPage(int page, int size);
 
 }

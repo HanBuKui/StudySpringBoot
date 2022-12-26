@@ -79,7 +79,7 @@ public class ProductServiceTest {
         //要在配置类中加拦截器使分页生效
         IPage<Product> page = new Page<>(2,3);
         productService.page(page);
-        System.out.println(page.getRecords());
+        System.out.println(page.getRecords());  //记录保存的地方
         System.out.println(page.getCurrent());
         System.out.println(page.getPages());
         System.out.println(page.getSize());

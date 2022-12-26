@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class ProjectExceptionAdvice {
 
     //拦截所有的异常信息
-    @ExceptionHandler  //处理什么异常由此决定
+    @ExceptionHandler(Exception.class)  //处理什么异常由此决定
     public Result doException(Exception ex){
         //记录日志
         //通知运维

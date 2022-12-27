@@ -52,11 +52,11 @@ public class ProductController {
     }
 
     @GetMapping("/{curPage}/{size}")
-    public Result getPage(@PathVariable int curPage, @PathVariable int size){
-        IPage<Product> page = service.getPage(curPage, size);
+    public Result getPage(@PathVariable int curPage, @PathVariable int size,String name,String desc,String price){
+        IPage<Product> page = service.getPage(curPage, size,name,desc,price);
         //如果当前页码值大于总页码值，那么重新查询，使用最大页码值作为当前页码值
         if(page.getCurrent() > page.getPages()){
-            page = service.getPage((int)page.getPages(), size);
+            page = service.getPage((int)page.getPages(), size,name,desc,price);
         }
         return new Result(true, page);
     }

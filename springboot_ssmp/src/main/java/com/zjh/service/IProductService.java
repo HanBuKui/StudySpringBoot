@@ -23,6 +23,7 @@ public interface IProductService extends IService<Product> {
      * @param size 页面显示数据大小
      * @return
      */
+    public IPage<Product> getPage(int page, int size, String name, String desc, String price);
     public IPage<Product> getPage(int page, int size);
 
 }

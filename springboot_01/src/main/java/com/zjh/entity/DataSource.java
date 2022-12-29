@@ -25,6 +25,6 @@ public class DataSource {
     private String username;
     private String password;
 
-//    @Autowired   可有可不有 User 可以//@ConfigurationProperties("datasource.user")  因为是这个一次性将所有都装入了
+//    @Autowired   可有可无 User 可以//@ConfigurationProperties("datasource.user")  因为是这个一次性将所有都装入了
     private User user;
 }

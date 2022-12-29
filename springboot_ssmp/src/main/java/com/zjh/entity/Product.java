@@ -4,6 +4,10 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.validation.annotation.Validated;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotEmpty;
 
 /**
  * @ClassName: Product
@@ -16,6 +20,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Validated
 public class Product {
 
     @TableId
@@ -23,7 +28,9 @@ public class Product {
     private String pname;
     private String pdec1;
     private String pdec2;
+    @NotEmpty(message = "pdec3 is empty")
     private String pdec3;
+    @Max(value = 100,message = "太贵了！！！")
     private double pprice;
     private String pimg1;
     private String pimg2;

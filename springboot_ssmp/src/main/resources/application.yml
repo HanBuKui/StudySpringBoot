@@ -13,11 +13,12 @@ spring:
       password: root
 
 
-
-
 mybatis-plus:
   global-config:
     db-config:
       id-type: auto
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+test:
+  value: 800

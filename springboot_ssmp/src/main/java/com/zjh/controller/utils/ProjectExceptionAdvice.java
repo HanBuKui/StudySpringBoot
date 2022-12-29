@@ -1,5 +1,6 @@
 package com.zjh.controller.utils;
 
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -24,6 +25,12 @@ public class ProjectExceptionAdvice {
         //通知运维
         //通知开发
         ex.printStackTrace();  //控制台的信息要显示！
-        return new Result(ex.getMessage());
+        return new Result(false,ex.getMessage());
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public Result doValidException(MethodArgumentNotValidException ex){
+        ex.printStackTrace();  //控制台的信息要显示！
+        return new Result("数据格式校验错误!");
     }
 }

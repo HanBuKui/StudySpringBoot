@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-@ConfigurationProperties("datasource.user")
+@ConfigurationProperties(prefix = "datasource.user")
 public class User {
     private String name;
     private int age;

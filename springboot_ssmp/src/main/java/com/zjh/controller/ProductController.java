@@ -7,6 +7,7 @@ import com.zjh.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.awt.print.Book;
 import java.util.List;
 
@@ -27,11 +28,12 @@ public class ProductController {
 
     @GetMapping
     public Result getAll(){
+        //网页中已经不用这个了，都用的分页查询
         return new Result(true,service.list());
     }
 
     @PostMapping
-    public Result save(@RequestBody Product product){
+    public Result save(@Valid @RequestBody Product product){
         Result result = new Result(service.save(product));
         return result;
     }

@@ -20,7 +20,7 @@ import javax.validation.constraints.NotEmpty;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Validated
+//@Validated  开启对当前bean的属性注入校验（比如ConfigurationProperties的情况下）  =》 哪里要校验，就在哪里放这个注解（参数传递的话是在controller哪里校验）
 public class Product {
 
     @TableId

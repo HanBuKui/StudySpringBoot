@@ -1,4 +1,4 @@
-package com.zjh.service.impl;
+package com.zjh.service.impl.base;
 
 import com.zjh.service.MessageService;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * @Version: 1.0
  */
 
-@Service
+//@Service
 public class MessageServiceImpl implements MessageService {
 
     private ArrayList<String> msgList = new ArrayList<>();

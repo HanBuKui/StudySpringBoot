@@ -1,2 +1,10 @@
 server:
   port: 9000
+
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+  jms:
+    template:
+      default-destination: zjh
+    pub-sub-domain: true   #·¢²¼¶©ÔÄ

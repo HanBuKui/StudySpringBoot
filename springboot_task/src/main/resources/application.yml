@@ -1,1 +1,4 @@
-
+spring:
+  task:
+    scheduling:
+      thread-name-prefix: spring_task_

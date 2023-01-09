@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * @Version: 1.0
  */
 
-@Service
+//@Service
 public class MessageServiceActivemqImpl implements MessageService {
 
     @Autowired
@@ -23,7 +23,7 @@ public class MessageServiceActivemqImpl implements MessageService {
 
     @Override
     public void sendMessage(String id) {
-        System.out.println("待发送短信的订单已进入处理队列，id="+id);
+        System.out.println("待发送短信的订单已进入处理队列(activemq)，id="+id);
         messagingTemplate.convertAndSend("order.queue.id",id);  //目的地(保存位置)
     }
 

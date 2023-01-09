@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @Version: 1.0
  */
 
-@Component  //让Spring管控
+//@Component  //让Spring管控
 public class MessageListener {
 
     @JmsListener(destination = "order.queue.id")   //监听器

@@ -9,6 +9,9 @@
         <option value="$PROJECT_DIR$/springboot_druid/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_ssmp/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_cache/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_task/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-mail/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_mq/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 9002
   servlet:
     context-path: /ssmpDemo
 
@@ -11,7 +11,10 @@ spring:
       url: jdbc:mysql://localhost:3306/webwork?serverTimezone=UTC
       username: root
       password: root
-
+  boot:
+    admin:
+      client:
+        url: http://localhost:9000
 
 mybatis-plus:
   global-config:
@@ -22,3 +25,14 @@ mybatis-plus:
 
 test:
   value: 800
+
+
+management:
+  endpoint:
+    health:
+      show-details: always
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"

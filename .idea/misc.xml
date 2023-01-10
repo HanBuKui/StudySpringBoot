@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/springboot_task/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-mail/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_mq/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_admin_server/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_admin_client/pom.xml" />
       </list>
     </option>
   </component>

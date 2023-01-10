@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @Version: 1.0
  */
 
-@Component
+//@Component
 @RocketMQMessageListener(consumerGroup = "group_rocketmq", topic = "order_id")
 public class MessageListener implements RocketMQListener<String> {
 

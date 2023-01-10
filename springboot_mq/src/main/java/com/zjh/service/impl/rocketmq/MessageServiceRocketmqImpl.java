@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
  * @Version: 1.0
  */
 
-@Service
+//@Service
 public class MessageServiceRocketmqImpl implements MessageService {
 
     @Autowired

@@ -12,11 +12,11 @@ spring:
     host: localhost
     port: 5672
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: localhost:9092      #zookeeper(注册中心)默认：2181 后面的操作都是连注册中心，通过注册中心找到服务器 topic在zookeeper上
     consumer:
       group-id: order
 
 rocketmq:
-  name-server: localhost:9876
+  name-server: localhost:9876   #命名服务器
   producer:
     group: group_rocketmq
